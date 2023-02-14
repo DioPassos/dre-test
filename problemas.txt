@@ -1,0 +1,32 @@
+Problemas encontrados:
+
+1° No Arquivo Compose.YAML em VOLUMES:
+O caminho estava a pasta como dagS e no caminho como dag
+ - ./dag:/opt/airflow/dags
+ 
+
+2° Em airflow-webserver
+A porta não estava definida:
+ports:
+     - 8080:8080
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:xxxx/health"]
+
+3° por padrão foram adicionads as pastas (LOGS e PLUGINS)
+
+4°No arquivo .py estava dando erro devido termo DAG estar Maiusculo
+    -from airflow.decorators import DAG
+("message": "\"dag\" is not defined","source": "Pylance")
+	"
+
+5°services:(Os acessos foram modificados para padrão no User)
+  postgres:
+    image: postgres:13
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: admin(Modificado para airflow)
+      POSTGRES_PASSWORD: airflow
+ 
+ 
+ 
