@@ -1,0 +1,44 @@
+Teste Técnico - Data Reliability Engineer II
+
+Conteúdo
+
+Repositório: https://github.com/cauimchagas/dre-test
+
+Nele temos uma estrutura de docker-compose (ref.), que:
+●	Cria os recursos necessários e executa o Apache Airflow (ref.)
+●	Cria uma DAG à partir do arquivo smooth.py
+●	Expõe a interface do Airflow
+
+Problema
+
+Hoje a estrutura entregue não está funcional, o candidato deve:
+●	Investigar o que está errado no projeto
+●	Ajustar o projeto
+●	Enviar a solução
+
+Resultado Esperado
+
+Ao executar o projeto enviado devemos:
+●	Ter o Airflow rodando com sucesso e com a interface web acessível
+●	Ao executar a DAG no Airflow o "Smooth Operator" deve ser acionado
+
+Adicionalmente sugerimos também entregar:
+Descritivo dos problemas encontrados e as soluções aplicadas (caso preferir pode ser via apresentação)
+
+Modos de Envio
+●	Enviar uma PR com a solução no repositório
+●	Adicionalmente recomendamos enviar uma apresentação/documento contendo os problemas encontrados e as soluções aplicadas
+
+Adicionais
+●	Criar um diagrama de arquitetura do Airflow e seus componentes instalados (DB, Redis, etc.)
+●	Adicionar o README.md descrevendo o projeto
+●	Entregar com o health check funcionando
+
+
+Objetivo
+Esse teste irá avaliar:
+
+●	Capacidade de identificação e resolução de problemas (Troubleshooting)
+●	Apresentação de problemas e suas subsequentes soluções (Post Mortem)
+●	Extra: construção e apresentação de arquitetura de soluções
+
